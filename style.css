@@ -1,0 +1,124 @@
+html,
+body {
+    display: flex; /* Align .main divs left to right */
+    gap: 25px; /* Add space between the .main divs */
+    justify-content: center; /* Center align horizontally */
+    align-items: end; /* Center align vertically */
+    place-items: center; /* Center horizontally */
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+    background: #f3f3f3; /* Optional background color */
+}
+
+.main {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    /* background: green; */
+    display: flex; /* Flexbox for horizontal layout */
+    gap: 20px; /* Space between cards */
+    justify-content: center; /* Center cards horizontally */
+    align-items: center; /* Align cards vertically in the row */
+
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.10s ease;
+    /* background: #430bfa; */
+}
+
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 5px;
+    background: #012a27;
+
+}
+
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    text-align: center;
+    font-family: 'zilla slab', sans-serif;
+    border-radius: 20px;
+    /* font-weight: bold; */
+    align-items: center;
+    transform: rotateY(180deg);
+    background: #037876;
+}
+
+.back img {
+
+    height: 150px;
+    width: 150px;
+    margin-top: 20px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(45deg, #3ddae9 25%, #2dadf2 50%);
+}
+
+.back .info {
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.back .info .title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 5px;
+    line-height: 1em;
+    color: #fff;
+
+}
+
+.back .info p {
+    margin-top: 5px;
+    font-size: 20px;
+    letter-spacing: 0.11em;
+    font-weight: 600;
+}
+
+.back ul {
+    margin-right: 25px;
+    margin-top: 25px;
+    display: flex;
+}
+
+.back ul a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #02484f 25%, #0a96e2 50%);
+    border: 3px solid transparent;
+    text-align: center;
+    margin-right: 10px;
+    color: #cc1010;
+    line-height: 45px;
+}
+
+.back ul a:hover {
+    border-color: rgb(255, 217, 4);
+    background: #026a55;
+    color: #ffffff;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
